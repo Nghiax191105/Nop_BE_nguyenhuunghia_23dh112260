@@ -1,0 +1,36 @@
+﻿@model Nop_BE_nguyenhuunghia_23dh112260.Models.Category
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="bg-info">XÓA DANH MỤC</h2>
+
+<h3 class="bg-danger">Bạn muốn xóa danh mục này?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.CategoryName)*@
+            TÊN DANH MỤC
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+
+        </div>
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-primary" /> |
+            @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-primary" })
+        </div>
+    }
+</div>

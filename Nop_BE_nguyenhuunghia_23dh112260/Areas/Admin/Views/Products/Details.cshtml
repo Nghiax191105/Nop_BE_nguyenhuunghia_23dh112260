@@ -1,0 +1,59 @@
+﻿@model Nop_BE_nguyenhuunghia_23dh112260.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            TÊN SẢN PHẨM
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductDecription)
+        </dt>
+
+        <dd>
+            MÔ TẢ
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductPrice)
+        </dt>
+
+        <dd>
+            GIÁ SẢN PHẨM
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductImage)
+        </dt>
+
+        <dd>
+            HÌNH ẢNH SẢN PHẨM
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </dt>
+
+        <dd>
+            DANH MỤC SẢN PHẨM
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sữa", "Edit", new { id = Model.CategoryID }, new { @class = "btn btn-primary" }) |
+    @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-primary" }) |
+</p>
